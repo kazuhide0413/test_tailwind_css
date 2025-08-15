@@ -1,24 +1,18 @@
-# README
+参考にしたサイト
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://tailwindcss.com/docs/installation/framework-guides/ruby-on-rails
 
-Things you may want to cover:
 
-* Ruby version
+新型らんてくん
 
-* System dependencies
+🚀 TailwindCSS導入の具体的手順
+Step 1: Gemを追加
+公式ドキュメントの内容をDockerコンテナ環境に合わせて実行します：
 
-* Configuration
+# tailwindcss-rubyを追加
+docker compose exec web bundle add tailwindcss-ruby
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# tailwindcss-railsを追加  
+docker compose exec web bundle add tailwindcss-rails
+Step 2: TailwindCSSを初期化
+docker compose exec web rails tailwindcss:install
